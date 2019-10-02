@@ -16,26 +16,22 @@ color_pb='#05F935'
 trace0 = go.Scatter(
     x = dem_candidates[0],
     y = poll_data[0],
-    mode = 'lines',
-    marker = {'color': color_ew}
+    mode = 'lines'
 )
 trace1 = go.Scatter(
     x = dem_candidates[1],
     y = poll_data[1],
-    mode = 'lines',
-    marker = {'color': color_jb}
+    mode = 'lines'
 )
 trace2 = go.Scatter(
     x = dem_candidates[2],
     y = poll_data[2],
-    mode = 'lines',
-    marker = {'color': color_bs}
+    mode = 'lines'
 
 trace3 = go.Scatter(
     x = dem_candidates[3],
     y = poll_data[3],
-    mode = 'lines',
-    marker = {'color': color_pb}
+    mode = 'lines'
 )
 )
 

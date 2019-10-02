@@ -18,28 +18,28 @@ trace0 = go.Scatter(
     y = poll_data[0],
     mode = 'lines',
     marker = {'color': color_ew},
-    name = name1
+    name = dem_candidates[0]
 )
 trace1 = go.Scatter(
     x = dem_candidates[1],
     y = poll_data[1],
     mode = 'lines',
     marker = {'color': color_jb},
-    name = name2
+    name = dem_candidates[1]
 )
 trace2 = go.Scatter(
     x = dem_candidates[2],
     y = poll_data[2],
     mode = 'lines',
     marker = {'color': color_bs},
-    name = name3
+    name = dem_candidates[2]
 
 trace3 = go.Scatter(
     x = dem_candidates[3],
     y = poll_data[3],
     mode = 'lines',
     marker = {'color': color_pb},
-    name = name4
+    name = dem_candidates[3]
 )
 )
 

@@ -4,7 +4,7 @@ import dash_html_components as html
 import plotly.graph_objs as go
 from dash.dependencies import Input, Output, State
 
-myheading1='Pick your 2020 Democratic presidential candidate'
+myheading='Pick your 2020 Democratic presidential candidate'
 tabtitle='2020'
 dem_candidates=['Warren', 'Biden', 'Sanders', 'Buttigieg']
 poll_data=[(20,23,33,45),(22,29,27,26),(13,15,16,10),(12,10,9,7)]
@@ -14,31 +14,31 @@ color_bs='#9013fc'
 color_pb='#05F935'
 
 trace0 = go.Scatter(
-    x = dem_candidates,
-    y = poll_data,
+    x = dem_candidates[0],
+    y = poll_data[0],
     mode = 'lines',
-    marker = {'color': color1},
+    marker = {'color': color_ew},
     name = name1
 )
 trace1 = go.Scatter(
-    x = x_values,
-    y = y2_values,
+    x = dem_candidates[1],
+    y = poll_data[1],
     mode = 'lines',
-    marker = {'color': color2},
+    marker = {'color': color_jb},
     name = name2
 )
 trace2 = go.Scatter(
-    x = x_values,
-    y = y3_values,
+    x = dem_candidates[2],
+    y = poll_data[2],
     mode = 'lines',
-    marker = {'color': color3},
+    marker = {'color': color_bs},
     name = name3
 
 trace3 = go.Scatter(
-    x = x_values,
-    y = y4_values,
+    x = dem_candidates[3],
+    y = poll_data[3],
     mode = 'lines',
-    marker = {'color': color3},
+    marker = {'color': color_pb},
     name = name4
 )
 )
@@ -73,4 +73,3 @@ app.layout = html.Div(children=[
 ############ Deploy
 if __name__ == '__main__':
     app.run_server()
-

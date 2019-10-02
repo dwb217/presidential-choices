@@ -17,35 +17,31 @@ trace0 = go.Scatter(
     x = dem_candidates[0],
     y = poll_data[0],
     mode = 'lines',
-    marker = {'color': color_ew},
-    name = dem_candidates[0]
+    marker = {'color': color_ew}
 )
 trace1 = go.Scatter(
     x = dem_candidates[1],
     y = poll_data[1],
     mode = 'lines',
-    marker = {'color': color_jb},
-    name = dem_candidates[1]
+    marker = {'color': color_jb}
 )
 trace2 = go.Scatter(
     x = dem_candidates[2],
     y = poll_data[2],
     mode = 'lines',
-    marker = {'color': color_bs},
-    name = dem_candidates[2]
+    marker = {'color': color_bs}
 
 trace3 = go.Scatter(
     x = dem_candidates[3],
     y = poll_data[3],
     mode = 'lines',
-    marker = {'color': color_pb},
-    name = dem_candidates[3]
+    marker = {'color': color_pb}
 )
 )
 
 data = [trace0, trace1, trace2, trace3]
 layout = go.Layout(
-    title = mytitle
+    title = 'charts
 )
 
 # Generate the figure dictionary

@@ -37,7 +37,7 @@ trace3 = go.Scatter(
 
 data = [trace0, trace1, trace2, trace3]
 layout = go.Layout(
-    title = 'charts
+    title = 'charts'
 )
 
 # Generate the figure dictionary

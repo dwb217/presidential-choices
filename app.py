@@ -10,7 +10,7 @@ mytitle = 'Chart'
 dem_candidates=('Warren', 'Biden', 'Sanders', 'Buttigieg')
 poll_dates=['July', 'August', 'September', 'October']
 poll_data=[[20,23,33,45],[22,29,27,26],[13,15,16,10],[12,10,9,7]]
-candidate_pics=[warren.jpg, biden.jpg, sanders.jpg, buttigieg.jpg]
+candidate_pics=[warren.jpg, biden.jpg, sanders.jpg, buttigieg.jpg, trump.jpg]
 color_ew='#fc8403'
 color_jb='#0317fc'
 color_bs='#9013fc'
@@ -75,7 +75,7 @@ app.layout = html.Div(children=[
                 {'label':dem_candidates[2], 'value':candidate_pics[2]},
                 {'label':dem_candidates[3], 'value':candidate_pics[3]},
                 ],
-        value=list_of_images[4],
+        value=candidate_pics[4],
         ),
     html.Div(id='your_output_here', children=''),
     ]

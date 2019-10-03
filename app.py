@@ -10,6 +10,9 @@ mytitle = 'Chart'
 dem_candidates=('Warren', 'Biden', 'Sanders', 'Buttigieg')
 poll_dates=['July', 'August', 'September', 'October']
 poll_data=[[20,23,33,45],[22,29,27,26],[13,15,16,10],[12,10,9,7]]
+candidate_pics=['warren.jpg', 'biden.jpg', 'sanders.jpg', 'buttigieg.jpg', 'trump.jpg']
+sourceurl = 'https://www.perdictit'
+githublink = 'https://github.com/dwb217/presidential-choices'
 color_ew='#fc8403'
 color_jb='#0317fc'
 color_bs='#9013fc'
@@ -60,11 +63,32 @@ app.title=tabtitle
 
 ########### Set up the layout
 app.layout = html.Div(children=[
+    html.H1(myheading1),
+    dcc.RadioItems(
+        id='your_input_here',
+        options=[
+                {'label':dem_candidates[0], 'value':candidate_pics[0]},
+                {'label':dem_candidates[1], 'value':candidate_pics[1]},
+                {'label':dem_candidates[2], 'value':candidate_pics[2]},
+                {'label':dem_candidates[3], 'value':candidate_pics[3]},
+                ],
+        value=candidate_pics[4],
+        ),
+    html.Div(id='your_output_here', children=''),
+    html.Br(),
+    ]
+)
+
+app.layout = html.Div(children=[
     html.H1(myheading),
     dcc.Graph(
         id='figure-1',
         figure=fig
     )
+    html.Br(),
+    html.A('Code on Github', href=githublink),
+    html.Br(),
+    html.A("Data Source", href=sourceurl),
     ]
 )
 

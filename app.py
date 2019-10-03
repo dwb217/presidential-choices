@@ -14,6 +14,8 @@ color_ew='#fc8403'
 color_jb='#0317fc'
 color_bs='#9013fc'
 color_pb='#05F935'
+sourceurl = 'https://www.predictit.com'
+githublink = 'https://github.com/dwb217/presidential-choices'
 
 trace0 = go.Scatter(
     x = poll_dates,
@@ -26,7 +28,7 @@ trace1 = go.Scatter(
     x = poll_dates,
     y = poll_data[1],
     mode = 'lines',
-    marker = {'color': color_jb},
+    marker = {'color': color_jp},
     name = dem_candidates[1]
 )
 trace2 = go.Scatter(
@@ -64,7 +66,10 @@ app.layout = html.Div(children=[
     dcc.Graph(
         id='figure-1',
         figure=fig
-    )
+    ),
+    html.A('Code on Github', href=githublink),
+    html.Br(),
+    html.A("Data Source", href=sourceurl),
     ]
 )
 

@@ -31,13 +31,12 @@ trace2 = go.Scatter(
     y = poll_data[2],
     mode = 'lines',
     name = dem_candidates[2]
-
+)
 trace3 = go.Scatter(
     x = poll_dates[3],
     y = poll_data[3],
     mode = 'lines',
     name = dem_candidates[3]
-)
 )
 
 data = [trace0, trace1, trace2, trace3]

@@ -4,9 +4,9 @@ import dash_html_components as html
 import plotly.graph_objs as go
 from dash.dependencies import Input, Output, State
 
-myheading='Pick your 2020 Democratic presidential candidate'
+myheading='2020 Democratic presidential candidate'
 tabtitle='2020'
-mytitle = 'Chart'
+mytitle = 'Betting market probability'
 dem_candidates=('Warren', 'Biden', 'Sanders', 'Buttigieg')
 poll_dates=['July', 'August', 'September', 'October']
 poll_data=[[20,23,33,45],[22,29,27,26],[13,15,16,10],[12,10,9,7]]
@@ -63,7 +63,7 @@ app.title=tabtitle
 
 ########### Set up the layout
 app.layout = html.Div(children=[
-    html.H1(myheading1),
+    html.H1(myheading),
     dcc.RadioItems(
         id='your_input_here',
         options=[
@@ -78,6 +78,13 @@ app.layout = html.Div(children=[
     html.Br(),
     ]
 )
+
+@app.callback(Output('your_output_here', 'children'),
+              [Input('your_input_here', 'value')])
+def radio_results(image_you_chose):
+    return html.Img(src=app.get_asset_url(image_you_chose), style={'width': 'auto', 'height': 'auto'}),
+
+
 
 app.layout = html.Div(children=[
     html.H1(myheading),

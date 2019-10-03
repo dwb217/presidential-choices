@@ -26,7 +26,7 @@ trace1 = go.Scatter(
     x = poll_dates,
     y = poll_data[1],
     mode = 'lines',
-    marker = {'color': color_jp},
+    marker = {'color': color_jb},
     name = dem_candidates[1]
 )
 trace2 = go.Scatter(

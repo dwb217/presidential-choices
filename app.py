@@ -62,6 +62,9 @@ server = app.server
 app.title=tabtitle
 
 ########### Set up the layout
+
+# the pictures
+
 app.layout = html.Div(children=[
     html.H1(myheading),
     dcc.RadioItems(
@@ -76,6 +79,7 @@ app.layout = html.Div(children=[
         ),
     html.Div(id='your_output_here', children=''),
     html.Br(),
+# the graph
     dcc.Graph(
         id='figure-1',
         figure=fig

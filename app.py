@@ -6,6 +6,7 @@ from dash.dependencies import Input, Output, State
 
 myheading='Pick your 2020 Democratic presidential candidate'
 tabtitle='2020'
+mytitle = 'Chart'
 dem_candidates=('Warren', 'Biden', 'Sanders', 'Buttigieg')
 poll_dates=['July', 'August', 'September', 'October']
 poll_data=[(20,23,33,45),(22,29,27,26),(13,15,16,10),(12,10,9,7)]
@@ -18,30 +19,34 @@ trace0 = go.Scatter(
     x = poll_dates[0],
     y = poll_data[0],
     mode = 'lines',
+    marker = {'color': color_ew},
     name = dem_candidates[0]
 )
 trace1 = go.Scatter(
     x = poll_dates[1],
     y = poll_data[1],
     mode = 'lines',
+    marker = {'color': color_jp},
     name = dem_candidates[1]
 )
 trace2 = go.Scatter(
     x = poll_dates[2],
     y = poll_data[2],
     mode = 'lines',
+    marker = {'color': color_bs},
     name = dem_candidates[2]
 )
 trace3 = go.Scatter(
     x = poll_dates[3],
     y = poll_data[3],
     mode = 'lines',
+    marker = {'color': color_pb},
     name = dem_candidates[3]
 )
 
 data = [trace0, trace1, trace2, trace3]
 layout = go.Layout(
-    title = 'charts'
+    title = mytitle
 )
 
 # Generate the figure dictionary

@@ -71,7 +71,7 @@ app.layout = html.Div(children=[
                 {'label':dem_candidates[3], 'value':candidate_pics[3]},
                 ],
         value=candidate_pics[4],
-        )
+        ),
     html.Div(id='your_output_here', children=''),
     ]
 )

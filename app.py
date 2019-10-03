@@ -90,7 +90,7 @@ app.layout = html.Div(children=[
 @app.callback(Output('your_output_here', 'children'),
               [Input('your_input_here', 'value')])
 def radio_results(image_you_chose):
-    return html.Img(src=app.get_asset_url(image_you_chose), style={'width': 'auto', 'height': 'auto'}),
+    return html.Img(src=app.get_asset_url(image_you_chose), style={'width': 'auto', 'height': '300px'}),
 
 ############ Deploy
 if __name__ == '__main__':

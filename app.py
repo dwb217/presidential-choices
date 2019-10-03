@@ -62,11 +62,6 @@ app.title=tabtitle
 ########### Set up the layout
 app.layout = html.Div(children=[
     html.H1(myheading),
-    dcc.Graph(
-        id='figure-1',
-        figure=fig
-    )
-    html.Br(),
     dcc.RadioItems(
         id='your_input_here',
         options=[
@@ -76,7 +71,7 @@ app.layout = html.Div(children=[
                 {'label':dem_candidates[3], 'value':candidate_pics[3]},
                 ],
         value=candidate_pics[4],
-        ),
+        )
     html.Div(id='your_output_here', children=''),
     ]
 )

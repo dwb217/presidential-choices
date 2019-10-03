@@ -7,7 +7,7 @@ from dash.dependencies import Input, Output, State
 myheading='Pick your 2020 Democratic presidential candidate'
 tabtitle='2020'
 dem_candidates=('Warren', 'Biden', 'Sanders', 'Buttigieg')
-Dates=['July', 'August', 'September', 'October']
+poll_dates=['July', 'August', 'September', 'October']
 poll_data=[(20,23,33,45),(22,29,27,26),(13,15,16,10),(12,10,9,7)]
 color_ew='#fc8403'
 color_jb='#0317fc'
@@ -15,25 +15,25 @@ color_bs='#9013fc'
 color_pb='#05F935'
 
 trace0 = go.Scatter(
-    x = dates[0],
+    x = poll_dates[0],
     y = poll_data[0],
     mode = 'lines',
     name = dem_candidates[0]
 )
 trace1 = go.Scatter(
-    x = dates[1],
+    x = poll_dates[1],
     y = poll_data[1],
     mode = 'lines',
     name = dem_candidates[1]
 )
 trace2 = go.Scatter(
-    x = dates[2],
+    x = poll_dates[2],
     y = poll_data[2],
     mode = 'lines',
     name = dem_candidates[2]
 
 trace3 = go.Scatter(
-    x = dates[3],
+    x = poll_dates[3],
     y = poll_data[3],
     mode = 'lines',
     name = dem_candidates[3]

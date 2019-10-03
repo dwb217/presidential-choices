@@ -4,9 +4,9 @@ import dash_html_components as html
 import plotly.graph_objs as go
 from dash.dependencies import Input, Output, State
 
-myheading='2020 Democratic presidential candidate'
+myheading='2020 Democratic presidential candidates'
 tabtitle='2020'
-mytitle = 'Betting market probability'
+mytitle = 'Betting market probability to win Democratic nomination'
 dem_candidates=('Warren', 'Biden', 'Sanders', 'Buttigieg')
 poll_dates=['July', 'August', 'September', 'October']
 poll_data=[[20,23,33,45],[22,29,27,26],[13,15,16,10],[12,10,9,7]]
